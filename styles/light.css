@@ -1,12 +1,100 @@
-/*
+/* 
   Специально для светлой темы при наличии класса.
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
+:root.theme_light {
+  --accent-color: #ff8dcb;
+}
+@media (prefers-color-scheme: light) {
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --accent-color: #ff8dcb;
+  --font-family: 'IBM Plex mono';
+  --gap: 20px;
+  background-color: var(--accent-color);
+  font-family: var(--font-family);
+  margin: 0 auto;
+  background-attachment: fixed;
+  background-image: url(../images/cover-image-light.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  color: #353430;
+  font-size: 1.16rem;
+  width: 4.4rem;
+  height: 1.6rem;
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid #353430;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(0 0 0 /.5);
+}
+
+.header__theme-menu-button:default {
+  border: 1px solid #353430;
+}
+
+section a {
+  color: #FF8DCB;
+}
+
+section a:default {
+  color: #FF8DCB;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+section a:focus {
+  border: 1px solid #353430;
+}
+
+.title {
+  font-size: 9.8rem;
+  font-weight: bold;
+  color: #FFC2E6;
+  text-shadow: 0.03em 0.03em #FF0070;
+  margin-top: 24.0vw;
+  height: 130px;
+}
+
+.header_description {
+  color: #353430;
+  font-size: 18px;
+  background-color: #FF8DCB;
+  width: 27.3em;
+  height: 3.8em;
+  margin-left: 49.7vw;
+  font-weight: bold;
+  margin-top: 148px;
+  word-spacing: 0.01em;
+}
+
+section h2 {
+  color: #353430;
+  font-size: 18px;
+}
+
+section h3 {
+  color: #353430;
+  background-color: #FF8DCB;
+}
+
+section p {
+  color: #353430;
+  font-size: 18px;
+}
 }
