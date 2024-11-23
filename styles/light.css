@@ -20,23 +20,7 @@
   background-size: cover;
 }
 
-.theme_light .header_rec {
-  display: none;
-}
-
-.theme_light .header__theme-menu-button_active {
-  border: 1px solid var(--nav-color);
-}
-
-.theme_light .header__theme-menu-button:focus {
-  border-bottom: 1px solid #353430;
-}
-
-.theme_light .header__theme-menu-button:hover {
-  border: 1px solid rgba(50 49 45 /.4);
-}
-
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
   --accent-color: #ff8dcb;
   --main-bg-color: #fff1f7;
@@ -47,6 +31,50 @@
   --header-logo-color: #ffc2e6;
   --footer-logo-color: #ffc2e6;
   }
+} */
+
+/* .theme_light .header_rec {
+  display: none;
+} */
+
+.header__theme-menu-list {
+  --gap: 12px;
+  row-gap: var(--gap);
+}
+
+.header__theme-menu-item {
+  list-style: none;
+  color: var(--accent-color);
+}
+
+.theme_light .header__theme-menu-button:focus {
+  border-bottom: 1px solid #353430;
+}
+
+.theme_light .header__theme-menu-button:hover {
+  border: 1px solid rgba(50 49 45 /.4);
+}
+
+.theme_light .decorated-zone::before {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-start: 1px solid var(--nav-color);
+  border-block-end: 1px solid var(--nav-color);
+  inset-inline-start: var(--main-gap);
+  inset-block-end: var(--main-gap);
+}
+
+.theme_light .decorated-zone::after {
+content: '';
+position: absolute;
+inline-size: 25px;
+block-size: 25px;
+border-inline-end: 1px solid var(--nav-color);
+border-block-start: 1px solid var(--nav-color);
+inset-inline-end: var(--main-gap);
+inset-block-start: var(--main-gap);
 }
 
 .theme_light .header__theme-menu-button {
@@ -58,8 +86,12 @@
   background-color: transparent;
 }
 
+.theme_light .header__theme-menu-button_active {
+  border: 1px solid var(--main-text-color);
+}
+
 .theme_light section a:default {
-  color: #FF8DCB;
+  color: var(--accent-color);
 }
 
 .theme_light section a:hover {
@@ -67,22 +99,49 @@
 }
 
 .theme_light section a:focus {
-  border: 1px solid #353430;
+  border: 1px solid var(--section-heading-color);
 }
 
-.theme_light .title {
-  font-size: 9.8rem;
-  font-weight: bold;
-  color: #FFC2E6;
-  text-shadow: 0.03em 0.03em #FF0070;
-  margin-top: 24.0vw;
-  height: 130px;
-}
+@media screen and (width >= 1024px) {
+  .title {
+    font-size: 9.8rem;
+    font-weight: bold;
+    color: var(--header-logo-color);
+    text-shadow: 0.03em 0.03em var(--accent-color);
+    margin-top: 20.0vw;
+    height: 130px;
+  }
+  }
+  
+  @media screen and (768px <= width < 1024px) {
+    .title {
+      font-size: 7.5rem;
+      font-weight: bold;
+      color: var(--header-logo-color);
+      text-shadow: 0.03em 0.03em var(--accent-color);
+      margin-top: 34.2vw;
+      height: 130px;
+    }
+  }
+  
+  @media screen and (375px <= width < 768px) {
+    .title {
+      font-size: 7.0rem;
+      font-weight: bold;
+      color: var(--header-logo-color);
+      text-shadow: 0.03em 0.03em var(--accent-color);
+      margin-top: 22.3vw;
+      margin-inline-start: 5vw;
+      width: 355px;
+      height: 192px;
+      line-height: 0.9;
+    }
+  }
 
 .theme_light .header_description {
   color: #353430;
   font-size: 18px;
-  background-color: #FF8DCB;
+  background-color: var(--accent-color);
   width: 27.3em;
   height: 3.8em;
   margin-left: 49.7vw;
@@ -92,16 +151,37 @@
 }
 
 .theme_light section h2 {
-  color: #353430;
+  color: var(--section-heading-color);
   font-size: 18px;
 }
 
 .theme_light section h3 {
-  color: #353430;
-  background-color: #FF8DCB;
+  color: var(--section-heading-color);
+  background-color: var(--accent-color);
 }
 
 .theme_light section p {
-  color: #353430;
+  color: var(--section-heading-color);
   font-size: 18px;
+}
+
+@media screen and (width >= 1024px) {
+  .theme_light .footer_title {
+    margin-top: 102.9vh;
+    margin-inline: 26.5vw;
+  }
+  }
+
+@media screen and (768px <= width < 1024px) {
+  .theme_light .footer_title {
+    margin-top: 4px;
+    margin-inline: 26vw;
+  }
+}
+
+@media screen and (375px <= width < 768px) {
+  .theme_light .footer_title {
+    margin-top: 62vh;
+    margin-inline: 6vw;
+  }
 }

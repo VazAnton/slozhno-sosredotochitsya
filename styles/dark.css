@@ -18,10 +18,6 @@
   --footer-logo-color: #db00ff;
 }
 
-.theme_dark .header_rec {
-  display: block;
-}
-
 .theme_dark .header__theme-menu-button_active {
   border: 1px solid var(--nav-color);
 }

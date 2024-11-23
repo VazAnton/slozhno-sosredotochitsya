@@ -45,9 +45,18 @@ html {
   inset-block-start: var(--main-gap);
 }
 
+.header_rec::after {
+  content: "";
+  position: absolute;
+  display: list-item;
+  list-style-type: disc;
+  top: 2.6vh;
+  right: 1.8vw;
+}
+
 @media (width >= 1024px) {
 .header_rec {
-  display: inline-block;
+  display: block;
   text-align: end;
   margin-inline-end: 4.8vw;
   font-size: 18px;
@@ -59,7 +68,7 @@ html {
 
 @media (768px <= width < 1024px) {
   .header_rec {
-    display: inline-block;
+    display: block;
     text-align: end;
     margin-inline-end: 6.3vw;
     font-size: 18px;
@@ -71,7 +80,7 @@ html {
 
 @media (375px <= width < 768px) {
   .header_rec {
-    display: inline-block;
+    display: block;
     text-align: end;
     margin-inline-end: 9.9vw;
     font-size: 18px;
@@ -424,7 +433,7 @@ section p {
   display: grid;
   grid-template-columns: 315px 638px;
   margin-top: 45px;
-  margin-left: 15px;
+  margin-left: 17px;
   align-content: start;
 }
 }
@@ -459,6 +468,12 @@ section p {
     width: 355px;
     height: 70px;
     margin-top: 8vh;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .section_3 h3 {
+    width: 649px;
   }
 }
 
@@ -633,7 +648,7 @@ section p {
   .section_with_pictures {
     margin-top: 10vh;
   }
-}  
+}
 
 @media screen and (width >= 1024px) {
   .footer_title {
@@ -648,25 +663,6 @@ section p {
     margin-inline: 26vw;
   }
 }
-
-@media screen and (width >= 1024px) {
-  footer {
-    min-height: 380px;
-  }
-}
-
-@media screen and (768px <= width < 1024px) {
-  footer {
-    min-height: 580px;
-  }
-}
-
-@media screen and (375px <= width < 768px) {
-  footer {
-    min-height: 368px;
-  }
-}
-
 
 @media screen and (375px <= width < 768px) {
   .footer_title {
