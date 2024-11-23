@@ -3,128 +3,29 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-:root.theme_dark {
-  --accent-color: #000028;
-}
-
-@media screen and (prefers-color-scheme: dark) {
- 
 .page.theme_dark {
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  --font-family: 'IBM Plex mono';
-  background-color: var(--accent-color);
-  font-family: var(--font-family);
-  margin: 0 auto;
-  background-attachment: fixed;
-  background-image: url(../images/cover-image-dark.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  --accent-color: #ff0070;
+  --main-bg-color: #00183f;
+  --main-text-color: #f1b2ce;
+  --nav-color: #ff0070;
+  --main-heading-color: #00183f;
+  --section-heading-color: #ff0070;
+  --header-logo-color: #db00ff;
+  --footer-logo-color: #db00ff;
 }
 
-@media screen and (width >= 1024px) {
-  .page.theme_dark {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  min-width: 1024px;
-}
+.theme_dark .header_rec {
+  display: block;
 }
 
-@media screen and (768px <= width < 1024px) {
-  .page.theme_dark {
-    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-    min-width: 768px;
-    max-width: 1023;
-  }
+.theme_dark .header__theme-menu-button_active {
+  border: 1px solid var(--nav-color);
 }
 
-@media screen and (375px <= width < 768px) {
-  .page.theme_dark {
-    /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-    max-width: 767px;
-    min-width: 375px;
-  }
-}
-
-@media screen and (width >= 1024px) {
-.title {
-  font-size: 9.8rem;
-  font-weight: bold;
-  color: #DB00FF;
-  text-shadow: 0.03em 0.03em #FF0070;
-  margin-top: 24.0vw;
-  height: 130px;
-}
-}
-
-@media screen and (768px <= width < 1024px) {
-  .title {
-    font-size: 7.5rem;
-    font-weight: bold;
-    color: #DB00FF;
-    text-shadow: 0.03em 0.03em #FF0070;
-    margin-top: 42.8vw;
-    height: 130px;
-  }
-}
-
-@media screen and (375px <= width < 768px) {
-  .title {
-    font-size: 7.0rem;
-    font-weight: bold;
-    color: #DB00FF;
-    text-shadow: 0.03em 0.03em #FF0070;
-    margin-top: 36.3vw;
-    margin-inline-start: 5vw;
-    width: 355px;
-    height: 192px;
-    line-height: 0.9;
-  }
-}
-
-@media screen and (width >= 1024px) {
-.header_description {
-  color: #000028;
-  font-size: 18px;
-  background-color: #FF0070;
-  width: 27em;
-  height: 3.8em;
-  margin-inline: 47.7vw;
-  font-weight: bold;
-  margin-top: 148px;
-  word-spacing: 0.01em;
-}
-}
-
-@media screen and (768px <= width < 1024px) {
-  .header_description {
-    color: #000028;
-    font-size: 18px;
-    background-color: #FF0070;
-    width: 368px;
-    height: 117px;
-    margin-left: 49.8vw;
-    font-weight: bold;
-    margin-top: 16vh;
-    word-spacing: 0.01em;
-  }
-}
-
-@media screen and (375px <= width < 768px) {
-  .header_description {
-    color: #000028;
-    font-size: 18px;
-    background-color: #FF0070;
-    width: 355px;
-    height: 117px;
-    font-weight: bold;
-    word-spacing: 0.01em;
-  }
-}
-
-section a:focus {
-  border: 1px solid white;
-}
+.theme_dark .header__theme-menu-button:hover {
+  --nav-hover-color: rgb(255 0 112 /.4);
 }
