@@ -649,6 +649,25 @@ section p {
   }
 }
 
+@media screen and (width >= 1024px) {
+  footer {
+    min-height: 380px;
+  }
+}
+
+@media screen and (768px <= width < 1024px) {
+  footer {
+    min-height: 580px;
+  }
+}
+
+@media screen and (375px <= width < 768px) {
+  footer {
+    min-height: 368px;
+  }
+}
+
+
 @media screen and (375px <= width < 768px) {
   .footer_title {
     margin-top: 62vh;
