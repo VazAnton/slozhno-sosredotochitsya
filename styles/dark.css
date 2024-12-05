@@ -17,11 +17,3 @@
   --header-logo-color: #db00ff;
   --footer-logo-color: #db00ff;
 }
-
-.theme_dark .header__theme-menu-button_active {
-  border: 1px solid var(--nav-color);
-}
-
-.theme_dark .header__theme-menu-button:hover {
-  --nav-hover-color: rgb(255 0 112 /.4);
-}
