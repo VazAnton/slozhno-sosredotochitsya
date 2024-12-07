@@ -382,7 +382,7 @@ section p {
 
 @media screen and (width >= 1024px) {
   .columns {
-    margin-top: 5vh;
+    margin-top: 5.4vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(315px, min-content));
     column-gap: 20px;
@@ -832,8 +832,8 @@ section h3, h4 {
   .footer::after {
     border-inline-end: 1px solid var(--nav-color);
     border-block-start: 1px solid var(--nav-color);
-    inset-inline-start: 96vw;
-    inset-block-start: 554.9vh;
+    inset-inline-start: 95.5vw;
+    inset-block-start: 554.6vh;
   }
 }
 
@@ -896,7 +896,7 @@ footer {
 
 @media screen and (width >= 1024px) {
   .footer_title {
-    margin-top: 35vh;
+    margin-top: 92vh;
   }
 }
 
