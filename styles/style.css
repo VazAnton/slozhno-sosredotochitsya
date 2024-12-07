@@ -856,7 +856,7 @@ section h3, h4 {
     border-inline-start: 1px solid var(--nav-color);
     border-block-end: 1px solid var(--nav-color);
     inset-inline-start: var(--main-gap);
-    inset-block-start: 1008vh;
+    inset-block-start: 1008.2vh;
 }
 .footer::after {
   border-inline-end: 1px solid var(--nav-color);
@@ -866,40 +866,30 @@ section h3, h4 {
 }
 }
 
+footer {
+  height: 100vh;
+  width: 100vw;
+  text-shadow: 2px 2px 0 var(--footer-logo-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (width >= 1024px) {
   footer {
-    /* height: 155vh; */
-    height: 100vh;
     min-height: 768px;
-    width: 100vw;
-    text-shadow: 2px 2px 0 var(--footer-logo-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
 @media screen and (768px <= width < 1024px) {
   footer {
-    height: 100vh;
-    width: 100vw;
-    text-shadow: 2px 2px 0 var(--footer-logo-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 1024px;
   }
 }
 
 @media screen and (375px <= width < 768px) {
   footer {
-    /* height: 120vh; */
-    height: 100vh;
     min-height: 668px;
-    width: 100vw;
-    text-shadow: 2px 2px 0 var(--footer-logo-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }
 
@@ -917,6 +907,6 @@ section h3, h4 {
 
 @media screen and (375px <= width < 768px) {
   .footer_title {
-    margin-top: 32vh;
+    margin-top: 54vh;
   }
 }
