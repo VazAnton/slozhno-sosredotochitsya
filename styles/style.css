@@ -10,7 +10,7 @@ html {
   background-size: cover;
   background-color: var(--main-bg-color);
   font-family: var(--main-font-family);
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 @supports (block-size: 100dvb) {
@@ -258,7 +258,7 @@ html {
 @media screen and (width >= 1024px) {
   .content {
     display: grid;
-    row-gap: 28px;
+    row-gap: 15px;
     justify-content: center;
   }
 }
@@ -266,7 +266,7 @@ html {
 @media screen and (768px <= width < 1024px) {
   .content {
     display: grid;
-    row-gap: 8vh;
+    row-gap: 6vh;
     justify-content: start;
   }
 }
@@ -440,7 +440,7 @@ section p {
 @media screen and (width >= 1024px) {
   .rows {
     display: grid;
-    row-gap: 20px;
+    row-gap: 8px;
   }
 }
 
@@ -483,6 +483,28 @@ section p {
   }
 }
 
+@media screen and (width >= 1024px) {
+.or_rows {
+  display: grid;
+  row-gap: 20px;
+}
+}
+
+@media screen and (width >= 1024px) {
+  .or_row {
+    display: grid;
+    row-gap: var(--main-gap);
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .or_row h4 {
+    background-color: var(--section-heading-color);
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
 @media screen and (375px <= width < 768px) {
   .or_rows {
     display: grid;
@@ -505,7 +527,7 @@ section p {
 
 @media screen and (width >= 1024px) {
   .section_2 h2 {
-    margin-left: 5px;
+    margin-left: 25px;
     margin-top: 55px;
     height: 33px;
   }
@@ -527,9 +549,9 @@ section p {
 @media screen and (768px <= width < 1024px) {
   .section_2 {
     margin-left: 3vw;
-    margin-top: 1vh;
+    /* margin-top: 1vh; */
     display: grid;
-    grid-template-rows: repeat(3, 64px);
+    /* grid-template-rows: repeat(3, 64px); */
   }
 }
 
@@ -547,20 +569,26 @@ section p {
   }
 }
 
+@media screen and (width >= 1024px) {
+  .section_3 {
+    margin-top: 7vh;
+  }
+}
+
 @media screen and (768px <= width < 1024px) {
   .section_3 {
     display: grid;
     grid-template-columns: 236px 472px;
-    margin-top: 41vh;
+    margin-top: 1vh;
     column-gap: 30px;
     margin-left: 2vw;
     justify-content: center;
   }
 }
 
-@media screen and (375px <= width < 768px) {
+@media screen and (375px <= width < 668px) {
   .section_3 {
-    margin-top: 18.5vh;
+    margin-top: 20vh;
     display: grid;
     align-content: start;
     row-gap: 20px;
@@ -626,6 +654,7 @@ section p {
 @media screen and (width >= 1024px) {
   .section_with_pictures {
     display: grid;
+    row-gap: 20px;
     justify-items: center;
   }
 
@@ -638,7 +667,7 @@ section p {
     grid-template-columns: repeat(3, 330px);
     grid-template-rows: 270px 320px 120px;
     justify-items: center;
-    gap: var(--main-gap);
+    gap: 5px;
   }
 
   .sunset {
@@ -790,6 +819,76 @@ section p {
 }
 
 @media screen and (width >= 1024px) {
+  .footer::before {
+    content: '';
+    position: absolute;
+    inline-size: 25px;
+    block-size: 25px;
+    border-inline-start: 1px solid var(--nav-color);
+    border-block-end: 1px solid var(--nav-color);
+    inset-inline-start: var(--main-gap);
+    inset-block-start: 646vh;
+  }
+  
+  .footer::after {
+    content: '';
+    position: absolute;
+    inline-size: 25px;
+    block-size: 25px;
+    border-inline-end: 1px solid var(--nav-color);
+    border-block-start: 1px solid var(--nav-color);
+    inset-inline-start: 96vw;
+    inset-block-start: 554.9vh;
+  }
+}
+
+@media screen and (768px <= width < 1024px) {
+  .footer::before {
+    content: '';
+    position: absolute;
+    inline-size: 25px;
+    block-size: 25px;
+    border-inline-start: 1px solid var(--nav-color);
+    border-block-end: 1px solid var(--nav-color);
+    inset-inline-start: var(--main-gap);
+    inset-block-start: 567vh;
+}
+.footer::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--nav-color);
+  border-block-start: 1px solid var(--nav-color);
+  inset-inline-start: 94vw;
+  inset-block-start: 473.3vh;
+}
+}
+
+@media screen and (375px <= width < 668px) {
+  .footer::before {
+    content: '';
+    position: absolute;
+    inline-size: 25px;
+    block-size: 25px;
+    border-inline-start: 1px solid var(--nav-color);
+    border-block-end: 1px solid var(--nav-color);
+    inset-inline-start: var(--main-gap);
+    inset-block-start: 1008vh;
+}
+.footer::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  border-inline-end: 1px solid var(--nav-color);
+  border-block-start: 1px solid var(--nav-color);
+  inset-inline-start: 90vw;
+  inset-block-start: 914.9vh;
+}
+}
+
+@media screen and (width >= 1024px) {
   footer {
     height: 155vh;
     min-height: 768px;
@@ -804,7 +903,7 @@ section p {
 @media screen and (768px <= width < 1024px) {
   footer {
     height: 100vh;
-    min-height: 1024px;
+    /* min-height: 1024px; */
     width: 100vw;
     text-shadow: 2px 2px 0 var(--footer-logo-color);
     display: flex;
@@ -813,15 +912,21 @@ section p {
   }
 }
 
-@media screen and (375px <= width < 768px) {
+@media screen and (375px <= width < 668px) {
   footer {
-    height: 100vh;
+    height: 120vh;
     min-height: 668px;
     width: 100vw;
     text-shadow: 2px 2px 0 var(--footer-logo-color);
-    text-align: center;
     display: flex;
+    justify-content: center;
     align-items: center;
+  }
+}
+
+@media screen and (width >= 1024px) {
+  .footer_title {
+    margin-top: 35vh;
   }
 }
 
@@ -833,6 +938,6 @@ section p {
 
 @media screen and (375px <= width < 768px) {
   .footer_title {
-    margin-top: 52vh;
+    margin-top: 32vh;
   }
 }
